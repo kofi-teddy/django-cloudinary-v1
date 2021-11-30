@@ -52,6 +52,19 @@ python-versions = ">=3.5.0"
 unicode_backport = ["unicodedata2"]
 
 [[package]]
+name = "cloudinary"
+version = "1.28.0"
+description = "Python and Django SDK for Cloudinary"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+certifi = "*"
+six = "*"
+urllib3 = "*"
+
+[[package]]
 name = "django"
 version = "3.2.9"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
@@ -67,6 +80,21 @@ sqlparse = ">=0.2.2"
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+
+[[package]]
+name = "django-cloudinary-storage"
+version = "0.3.0"
+description = "Django package that provides Cloudinary storages for both media and static files as well as management commands for removing unnecessary files."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+cloudinary = ">=1.4.0"
+requests = ">=2.10.0"
+
+[package.extras]
+video = ["python-magic (>=0.4.12)"]
 
 [[package]]
 name = "django-filter"
@@ -388,7 +416,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f30ad663e88cfcd19ecf52863b7917c874090f02a808a1dc38aee24909e576e0"
+content-hash = "683ef8abc6872df874d9242305000a149a15d5c9887fb8b9cf21850bd23e3399"
 
 [metadata.files]
 anyascii = [
@@ -412,9 +440,16 @@ charset-normalizer = [
     {file = "charset-normalizer-2.0.8.tar.gz", hash = "sha256:735e240d9a8506778cd7a453d97e817e536bb1fc29f4f6961ce297b9c7a917b0"},
     {file = "charset_normalizer-2.0.8-py3-none-any.whl", hash = "sha256:83fcdeb225499d6344c8f7f34684c2981270beacc32ede2e669e94f7fa544405"},
 ]
+cloudinary = [
+    {file = "cloudinary-1.28.0.tar.gz", hash = "sha256:9848d197857ab21b8e1d39e23cccae335127d96297f7ea638e0e6898a7db73c8"},
+]
 django = [
     {file = "Django-3.2.9-py3-none-any.whl", hash = "sha256:e22c9266da3eec7827737cde57694d7db801fedac938d252bf27377cec06ed1b"},
     {file = "Django-3.2.9.tar.gz", hash = "sha256:51284300f1522ffcdb07ccbdf676a307c6678659e1284f0618e5a774127a6a08"},
+]
+django-cloudinary-storage = [
+    {file = "django-cloudinary-storage-0.3.0.tar.gz", hash = "sha256:debd403a5f225c9d35c4af508ff4abc7fdc262129464134b60b2feeb2c44d3e1"},
+    {file = "django_cloudinary_storage-0.3.0-py3-none-any.whl", hash = "sha256:95c855c7334141b2a485ea7eb5716de87bb6ce0d848e205debb3a3ab7bbbd49a"},
 ]
 django-filter = [
     {file = "django-filter-2.4.0.tar.gz", hash = "sha256:84e9d5bb93f237e451db814ed422a3a625751cbc9968b484ecc74964a8696b06"},

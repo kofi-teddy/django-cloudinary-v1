@@ -8,6 +8,7 @@ authors = ["kofi-teddy <agudogot@gmail.com>"]
 python = "^3.9"
 wagtail = "2.14.1"
 python-decouple = "^3.5"
+django-cloudinary-storage = "^0.3.0"
 
 [tool.poetry.dev-dependencies]
 
